@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <script src="dsd.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+
+
+    /* Global styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #122644;
+      color: #fff;
+      padding: 20px;
+    }
+
+
+    header {
+  position: relative;
+}
+
+nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Section styles */
+section {
+  position: relative;
+}
+
+section h2 {
+  text-align: right;
+}
+
+/* Contact styles */
+section#contact {
+  text-align: right;
+}
+
+    h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Section styles */
+    section {
+      padding: 40px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #2f075c;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    /* Navigator styles */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #dfd8d8;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #3348be;
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nover Vasquez Osoteo|My Portfolio</h1>
+    <div class="container"><img src="icon.png" height="150px" width="150px">
+   
+        
+    </div>
+
+    <div class="dice">
+      <div class="face front"></div>
+      <div class="face back"></div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
+      <div class="face left"></div>
+      <div class="face right"></div>
+    </div>
+    
+    
+</nav>
+
+ <div class="container2">
+    <h3><span>Hi I'm Nover Osoteo</span></h3>  
+    <h1>2nd year BSIT STUDENT</h1>      
+    <h3>Allow yourself to be a <span class="beginner">BEGINNER</span>. No one starts off being <span class="excellent">EXCELLENT.</span> <br> A creative and quick-thinking
+         individual with a passion for brand awareness <br> and customer engagement.</h3>   
+
+ </div>
+ <div class="fonts">
+ <ul>
+    <li><a href="https://web.facebook.com/nathaniel.manio.52"><i class="fa-brands fa-facebook"></i></a></li>
+    <li><a href="https://www.instagram.com/imnathan_niel/?hl=en"><i class="fa-brands fa-instagram"></i></a></li>
+    <li><a href="https://web.telegram.org/k/"><i class="fa-brands fa-telegram"></i></a></li>
+ </ul>
+</div>
+<div class="image">
+    <img src="she.png" class="background">
+</div>
+
+<div class="fonts1">
+    <ul class="ufo">
+        <li><a href="https://web.facebook.com/nathaniel.manio.52"><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/imnathan_niel/?hl=en"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://web.telegram.org/k/"><i class="fa-brands fa-telegram"></i></a></li>
+     </ul>
+</div>
+   
+    <nav>
+      <ul>
+        <li><a href="#" class="nav-link" data-target="about">About</a></li>
+        <li><a href="#" class="nav-link" data-target="projects">Projects</a></li>
+        <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="slide active-slide" id="about">
+    <h2>About Me</h2>
+    <p>Write a brief description about yourself here.</p>
+  </div>
+
+  <div class="slide" id="projects">
+    <h2>Projects</h2>
+    <ul class="projects">
+      <li>
+        <h3>Project 1</h3>
+        <p>Description of project 1.</p>
+      </li>
+      <li>
+        <h3>Project 2</h3>
+        <p>Description of project 2.</p>
+      </li>
+      <!-- Add more projects as needed -->
+    </ul>
+  </div>
+
+  <div class="slide" id="contact">
+    <h2>Contact Me</h2>
+    <p>Include your contact information here, such as email, phone number, or social media links.</p>
+  </div>
+
+  <footer>
+    &copy; 2023 My Portfolio. All rights reserved.
+  </footer>
+
+  <script>
+    // JavaScript code
+
+    // Get all the navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Get all the slides
+    const slides = document.querySelectorAll('.slide');
+
+    // Add click event listeners to each navigation link
+    navLinks.forEach(link => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the default link behavior
+
+        // Remove active class from all slides
+        slides.forEach(slide => {
+          slide.classList.remove('active-slide');
+        });
+
+        // Get the target slide ID from the data-target attribute
+        const targetId = link.getAttribute('data-target');
+
+        // Add active class to the target slide
+        document.getElementById(targetId).classList.add('active-slide');
+      });
+    });
+  </script>
+</body>
+</html>
